@@ -25,6 +25,11 @@ app.get("/", (_req, res) => {
 });
 app.use("/api/files", require("./routes/files"));
 app.use("/api/pages", require("./routes/pages"));
+app.all("*", (_req, res) => {
+	return res
+	  .status(404)
+	  .sendFile("404.html", { root: path.join(__dirname, "public") });
+});
 
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`);
