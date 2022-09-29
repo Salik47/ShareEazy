@@ -2,7 +2,7 @@
 
 https://shareeazy-production.up.railway.app
 
-A file-sharing web app, which allows the user to seamlessly share files on the internet
+A file sharing web app, which allows the user to seamlessly share files on the internet
 
 ## Features
 
