@@ -1,6 +1,6 @@
 # Share Eazy
 
-https://shareeazy-production.up.railway.app
+https://share-eazy.herokuapp.com
 
 A file sharing web app, which allows the user to seamlessly share files on the internet
 
