@@ -1,6 +1,6 @@
 # Share Eazy
 
-https://share-eazy.herokuapp.com
+https://share-eazy.onrender.com/
 
 A file sharing web app, which allows the user to seamlessly share files on the internet
 
