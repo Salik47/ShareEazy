@@ -17,6 +17,7 @@ html {
 body,
 .drop-zone,
 .upload-container {
+	margin-left: 50px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
