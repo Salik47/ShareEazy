@@ -17,7 +17,6 @@ html {
 body,
 .drop-zone,
 .upload-container {
-	margin-left: 50px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -39,6 +38,7 @@ body {
 }
 
 .upload-container {
+	margin-left: 50px;
 	background: #ffffff;
 	border-radius: 25px;
 	box-shadow: 0 20px 20px #0000002e;
@@ -265,5 +265,8 @@ p {
 	.email-container .field {
 		flex-direction: column;
 		width: 200px;
+	}
+	.upload-container {
+		margin-left: 0;
 	}
 }
