@@ -1,11 +1,15 @@
 const express = require("express");
+const scheduler = require("node-cron");
 const path = require("path");
 const connectDB = require("./config/db");
+const { fetchAndDeleteData } = require("./services/fileCleaner");
 require("dotenv").config;
 
 const PORT = process.env.PORT || 1338;
 const app = express();
 connectDB();
+
+scheduler.schedule("00 12 * * *", () => fetchAndDeleteData());
 
 // Templating Engine
 app.set("views", path.join(__dirname, "/views"));
@@ -26,9 +30,9 @@ app.get("/", (_req, res) => {
 app.use("/api/files", require("./routes/files"));
 app.use("/api/pages", require("./routes/pages"));
 app.all("*", (_req, res) => {
-	return res
-	  .status(404)
-	  .sendFile("404.html", { root: path.join(__dirname, "public") });
+  return res
+    .status(404)
+    .sendFile("404.html", { root: path.join(__dirname, "public") });
 });
 
 app.listen(PORT, () => {
